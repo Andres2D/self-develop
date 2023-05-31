@@ -1,0 +1,13 @@
+.profile {
+  display: flex;
+  .image {
+    width: 300px;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+  }
+}
+
