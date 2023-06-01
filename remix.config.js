@@ -1,6 +1,6 @@
 /** @type {import('@remix-run/dev').AppConfig} */
 module.exports = {
-  ignoredRouteFiles: ["**/.*"],
+  ignoredRouteFiles: ["**/.*", "*.css"],
   server:
     process.env.NETLIFY || process.env.NETLIFY_LOCAL
       ? "./server.ts"
