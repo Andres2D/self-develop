@@ -10,7 +10,7 @@ export const NewBlank = () => {
 
   return (
     <div className={styles.new} onClick={handleClick}>
-      <h3>Blank</h3>
+      <h3 className={styles.label}>Blank</h3>
     </div>
   );
 };
