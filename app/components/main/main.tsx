@@ -1,13 +1,15 @@
-import styles from './main.module.css';
 import NewBlank from './new-blank';
 import Templates from './templates';
+import ContentWrapper from '../shared/content-wrapper';
 
 const Main = () => {
   return (
-    <section className={styles.container}>
-      <NewBlank />
-      <Templates />
-    </section>
+    <ContentWrapper>
+      <>
+        <NewBlank />
+        <Templates />
+      </>
+    </ContentWrapper>
   )
 };
 
