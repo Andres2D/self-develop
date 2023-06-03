@@ -1,0 +1,45 @@
+.grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-rows: 1fr;
+  grid-template-areas:
+    "profile header header"
+    "skills experience experience"
+    "skills experience experience"
+    "links certificates certificates";
+  min-height: 95vh;
+  gap: 10px;
+  margin-left: 50px;
+  margin-right: 10px;
+}
+
+.section {
+  border: 2px solid #333;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.profile {
+  grid-area: profile;
+}
+
+.header {
+  grid-area: header;
+}
+
+.skills {
+  grid-area: skills;
+}
+
+.experience {
+  grid-area: experience;
+}
+
+.links {
+  grid-area: links;
+}
+
+.certificates {
+  grid-area: certificates;
+}

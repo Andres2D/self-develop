@@ -1,8 +1,10 @@
 import ContentWrapper from '../shared/content-wrapper';
+import Grid from './grid';
+
 const Resume = () => {
   return (
     <ContentWrapper>
-      <h1>Resume creation</h1>
+      <Grid />
     </ContentWrapper>
   );
 };
