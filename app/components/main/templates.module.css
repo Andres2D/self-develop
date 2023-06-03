@@ -1,0 +1,23 @@
+.templates {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.template {
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #B4AEAE;
+  display: flex;
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  height: 200px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.title {
+  width: 100%;
+}
