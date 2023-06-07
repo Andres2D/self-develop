@@ -16,25 +16,20 @@ const Sidebar = () => {
         onChange={handleSettingsClick}
       />
       <VscSettings className={styles.icon} />
-      {
-        // <h3 className={
-        //   `
-        //     ${styles.label}
-        //     ${settingsToggle ? styles.switchOff : styles.switchOn}
-        //   `
-        // }
-        // >Settings</h3>
-      }
       <ul
         className={`
               ${styles.templates}
-              ${settingsToggle ? styles.switchOff : styles.switchOn}
+              ${settingsToggle ? styles.switchOn : styles.switchOff}
             `}
       >
-        <li>Option 1</li>
-        <li>Option 2</li>
-        <li>Option 3</li>
-        <li>Option 4</li>
+        <li className={styles.templateGrid}>
+          <div className={`${styles.baseSection} ${styles.profile}`}></div>
+          <div className={`${styles.baseSection} ${styles.header}`}></div>
+          <div className={`${styles.baseSection} ${styles.skills}`}></div>
+          <div className={`${styles.baseSection} ${styles.experience}`}></div>
+          <div className={`${styles.baseSection} ${styles.certificates}`}></div>
+          <h2 className={styles.sectionLabel}>Classic</h2>
+        </li>          
       </ul>
     </nav>
   );
