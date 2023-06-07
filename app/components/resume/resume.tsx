@@ -1,5 +1,5 @@
 import ContentWrapper from '../shared/content-wrapper';
-import Sidebar from '../shared/sidebar';
+import Sidebar from './sidebar';
 import Grid from './grid';
 
 const Resume = () => {

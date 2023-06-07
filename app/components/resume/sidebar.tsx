@@ -1,5 +1,7 @@
 import { type ChangeEvent, useState } from 'react';
 import { VscSettings } from 'react-icons/vsc';
+import SidebarItem from './sidebar-item';
+import { sidebarOptions } from '../../constants/constants';
 import styles from './sidebar.module.css';
 
 const Sidebar = () => {
@@ -8,6 +10,11 @@ const Sidebar = () => {
   const handleSettingsClick = (evt: ChangeEvent<HTMLInputElement>) => {
     setSettingsToggle(evt.target.checked || false);
   };
+
+  const optionsMap = sidebarOptions.map(option => {
+    return <SidebarItem key={option.id} item={option} /> 
+  })
+
   return (
     <nav className={styles.navigator}>
       <input
@@ -21,15 +28,8 @@ const Sidebar = () => {
               ${styles.templates}
               ${settingsToggle ? styles.switchOn : styles.switchOff}
             `}
-      >
-        <li className={styles.templateGrid}>
-          <div className={`${styles.baseSection} ${styles.profile}`}></div>
-          <div className={`${styles.baseSection} ${styles.header}`}></div>
-          <div className={`${styles.baseSection} ${styles.skills}`}></div>
-          <div className={`${styles.baseSection} ${styles.experience}`}></div>
-          <div className={`${styles.baseSection} ${styles.certificates}`}></div>
-          <h2 className={styles.sectionLabel}>Classic</h2>
-        </li>          
+      >  
+        {optionsMap}
       </ul>
     </nav>
   );
