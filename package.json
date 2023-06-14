@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@netlify/functions": "^1.4.0",
+    "@reduxjs/toolkit": "^1.9.5",
     "@remix-run/css-bundle": "^1.16.1",
     "@remix-run/netlify": "^1.16.1",
     "@remix-run/node": "^1.16.1",
@@ -17,7 +18,8 @@
     "isbot": "^3.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.9.0"
+    "react-icons": "^4.9.0",
+    "react-redux": "^8.1.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.16.1",

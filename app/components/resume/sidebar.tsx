@@ -26,7 +26,7 @@ const Sidebar = () => {
       <ul
         className={`
               ${styles.templates}
-              ${settingsToggle ? styles.switchOn : styles.switchOff}
+              ${settingsToggle ? styles.switchOff : styles.switchOn}
             `}
       >  
         {optionsMap}
