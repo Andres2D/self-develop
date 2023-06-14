@@ -3,11 +3,15 @@ import styles from './sidebar-item.module.css';
 
 type Props = {
   item: SidebarOption;
+  clickAction: () => void
 }
 
-const SidebarItem = ({item}: Props) => {
+const SidebarItem = ({item, clickAction}: Props) => {
   return (
-    <li className={`${styles.templateGrid} ${styles[item.id]}`}>
+    <li 
+      className={`${styles.templateGrid} ${styles[item.id]}`}
+      onClick={clickAction}
+    >
       {
         item.id === 'classic' &&
         <div className={`${styles.baseSection} ${styles.profile}`}></div>

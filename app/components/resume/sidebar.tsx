@@ -7,13 +7,19 @@ import styles from './sidebar.module.css';
 const Sidebar = () => {
   const [settingsToggle, setSettingsToggle] = useState(false);
 
-  const handleSettingsClick = (evt: ChangeEvent<HTMLInputElement>) => {
-    setSettingsToggle(evt.target.checked || false);
+  const handleSettingsClick = (evt?: ChangeEvent<HTMLInputElement>) => {
+    setSettingsToggle(evt?.target.checked || false);
   };
 
   const optionsMap = sidebarOptions.map(option => {
-    return <SidebarItem key={option.id} item={option} /> 
-  })
+    return (
+      <SidebarItem 
+        key={option.id} 
+        item={option} 
+        clickAction={handleSettingsClick}
+      /> 
+    );
+  });
 
   return (
     <nav className={styles.navigator}>
