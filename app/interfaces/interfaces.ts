@@ -1,4 +1,6 @@
+import type { TemplateDesign } from "./template";
+
 export interface SidebarOption {
-  id: string;
+  id: TemplateDesign;
   label: string;
 };

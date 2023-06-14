@@ -1,5 +1,7 @@
+import { useDispatch } from 'react-redux';
 import { type SidebarOption } from '~/interfaces/interfaces';
 import styles from './sidebar-item.module.css';
+import { templateActions } from '../../store/template.slice';
 
 type Props = {
   item: SidebarOption;
@@ -7,10 +9,18 @@ type Props = {
 }
 
 const SidebarItem = ({item, clickAction}: Props) => {
+
+  const dispatch = useDispatch();
+
+  const handleItemClick = () => {
+    dispatch(templateActions.setTemplate({design: item.id}));
+    clickAction();
+  }; 
+
   return (
     <li 
       className={`${styles.templateGrid} ${styles[item.id]}`}
-      onClick={clickAction}
+      onClick={handleItemClick}
     >
       {
         item.id === 'classic' &&
