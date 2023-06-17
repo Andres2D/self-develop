@@ -9,11 +9,6 @@
   display: grid;
   grid-auto-flow: column;
   grid-auto-rows: 1fr;
-  grid-template-areas:
-    "profile header header"
-    "skills experience experience"
-    "skills experience experience"
-    "links certificates certificates";
   min-height: 95vh;
   gap: 10px;
   margin-right: 10px;
@@ -48,4 +43,28 @@
 
 .certificates {
   grid-area: certificates;
+}
+
+.classic {
+  grid-template-areas:
+    "profile header header"
+    "skills experience experience"
+    "skills experience experience"
+    "links certificates certificates";
+}
+
+.justify {
+  grid-template-areas:
+    "skills header header"
+    "skills experience experience"
+    "skills experience experience"
+    "links certificates certificates";
+}
+
+.minimalist {
+  grid-template-areas:
+    "header header header"
+    "skills experience experience"
+    "skills experience experience"
+    "links experience experience";
 }
