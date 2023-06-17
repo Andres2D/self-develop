@@ -1,0 +1,15 @@
+.header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.title {
+  font-size: 70px;
+  font-weight: 700;
+}
+
+.role {
+  font-size: 30px;
+}

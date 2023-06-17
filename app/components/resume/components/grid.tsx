@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import type { RootState } from '~/interfaces/root';
 import styles from './grid.module.css';
+import Header from './grid/header';
 import Profile from './grid/profile';
 
 const Grid = () => {
@@ -17,7 +18,8 @@ const Grid = () => {
         templateState.design === 'classic' &&
         <Profile className={`${styles.profile} ${styles.section}`}/>
       }
-      <header className={`${styles.header} ${styles.section}`}>header</header>
+      {/* <header className={`${styles.header} ${styles.section}`}>header</header> */}
+      <Header className={`${styles.header} ${styles.section}`} />
       <aside className={`${styles.skills} ${styles.section}`}>skills</aside>
       <article className={`${styles.experience} ${styles.section}`}>experience</article>
       <aside className={`${styles.links} ${styles.section}`}>links</aside>
