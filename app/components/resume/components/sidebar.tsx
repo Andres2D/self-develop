@@ -1,7 +1,7 @@
 import { type ChangeEvent, useState } from 'react';
 import { VscSettings } from 'react-icons/vsc';
 import SidebarItem from './sidebar-item';
-import { sidebarOptions } from '../../constants/constants';
+import { sidebarOptions } from '../../../constants/constants';
 import styles from './sidebar.module.css';
 
 const Sidebar = () => {

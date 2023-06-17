@@ -1,6 +1,6 @@
 import ContentWrapper from '../shared/content-wrapper';
-import Sidebar from './sidebar';
-import Grid from './grid';
+import Sidebar from './components/sidebar';
+import Grid from './components/grid';
 
 const Resume = () => {
   return (

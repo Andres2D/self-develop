@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { type SidebarOption } from '~/interfaces/interfaces';
 import styles from './sidebar-item.module.css';
-import { templateActions } from '../../store/template.slice';
+import { templateActions } from '../../../store/template.slice';
 
 type Props = {
   item: SidebarOption;
