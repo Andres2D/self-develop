@@ -12,6 +12,9 @@
   min-height: 95vh;
   gap: 10px;
   margin-right: 10px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .section {
