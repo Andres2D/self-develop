@@ -1,6 +1,6 @@
 .baseSection {
-  min-width: 100%;
-  min-height: 50px;
+  min-width: 70%;
+  min-height: 40px;
   background-color: #B4AEAE;
   border-radius: 5px;
   cursor: pointer;
@@ -15,6 +15,7 @@
   gap: 5px;
   padding: 5px;
   margin-bottom: 10px;
+  width: 90%;
 }
 
 .classic {
@@ -63,7 +64,7 @@
 
 .sectionLabel {
   position: absolute;
-  top: 97px;
+  top: 80px;
   text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
   cursor: pointer;
   text-align: center;

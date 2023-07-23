@@ -6,10 +6,32 @@
 }
 
 .title {
-  font-size: 70px;
+  font-size: 50px;
   font-weight: 700;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  width: 100%
 }
 
 .role {
-  font-size: 30px;
+  font-size: 20px;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  width: 100%
+}
+
+.description {
+  border: none;
+  background-color: transparent;
+  height: 155px;
+  width: 560px;
+  margin-top: 10px
+}
+
+.title:focus-visible,
+.description:focus-visible,
+.role:focus-visible {
+  outline: none;
 }
