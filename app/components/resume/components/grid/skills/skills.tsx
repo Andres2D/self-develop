@@ -1,12 +1,14 @@
 import styles from './skills.module.css';
 import SkillItem from './components/skill-item';
+import PlusButton from '../../plus-button';
+import { useState } from 'react';
 
 type Props = {
   className: string;
 };
 
 const Skills = ({ className }: Props) => {
-  const skills = [
+  const defaultSkills = [
     {
       id: 1,
       title: 'Angular',
@@ -30,6 +32,22 @@ const Skills = ({ className }: Props) => {
     },
   ];
 
+  const [skills, setSkills] = useState(defaultSkills);
+
+  const plusHandler = () => {
+    console.log('Add new skill');
+    setSkills(skills => {
+      return [
+        ...skills,
+        {
+          id: skills[skills.length - 1].id + 1,
+          title: 'New Skill',
+          description: 'Description'
+        }
+      ]
+    });
+  };
+
   const skillsListMap = skills.map(({id, title, description}) => {
     return (
       <SkillItem
@@ -46,6 +64,9 @@ const Skills = ({ className }: Props) => {
       <ul>
         {skillsListMap}
       </ul>
+     <PlusButton 
+      onClick={plusHandler}
+     />
     </aside>
   );
 };
