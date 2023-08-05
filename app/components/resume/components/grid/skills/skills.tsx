@@ -35,12 +35,12 @@ const Skills = ({ className }: Props) => {
   const [skills, setSkills] = useState(defaultSkills);
 
   const plusHandler = () => {
-    console.log('Add new skill');
     setSkills(skills => {
+      const id = skills.length ? skills[skills.length - 1].id + 1 : 0;
       return [
         ...skills,
         {
-          id: skills[skills.length - 1].id + 1,
+          id,
           title: 'New Skill',
           description: 'Description'
         }
@@ -48,19 +48,26 @@ const Skills = ({ className }: Props) => {
     });
   };
 
+  const removeItemHandler = (id: number) => {
+    setSkills(skills => {
+      return skills.filter(skill => skill.id !== id);
+    });
+  }
+
   const skillsListMap = skills.map(({id, title, description}) => {
     return (
       <SkillItem
         key={id}
         item={title}
         description={description}
+        removeItem={() => removeItemHandler(id)}
       />
     );
   });
 
   return (
     <aside className={`${className} ${styles.skills}`}>
-      <h1>Skills</h1>
+      <h1 className={styles.title}>Skills</h1>
       <ul>
         {skillsListMap}
       </ul>
