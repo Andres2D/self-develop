@@ -1,0 +1,18 @@
+.item {
+  margin: 10px;
+}
+
+.title {
+  font-size: larger;
+  text-align: start;
+}
+
+.dates {
+  font-size: small;
+  color: grey;
+  display: inline;
+}
+
+.jobTitle {
+  text-align: start;
+}

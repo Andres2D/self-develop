@@ -4,6 +4,7 @@ import styles from './grid.module.css';
 import Header from './grid/header';
 import Profile from './grid/profile';
 import Skills from './grid/skills/skills';
+import Experience from './grid/experience/experience';
 
 const Grid = () => {
 
@@ -22,7 +23,7 @@ const Grid = () => {
       {/* <header className={`${styles.header} ${styles.section}`}>header</header> */}
       <Header className={`${styles.header} ${styles.section}`} />
       <Skills className={`${styles.skills} ${styles.section}`} />
-      <article className={`${styles.experience} ${styles.section}`}>experience</article>
+      <Experience className={`${styles.experience} ${styles.section}`} />
       <aside className={`${styles.links} ${styles.section}`}>links</aside>
       {
         templateState.design !== 'minimalist' &&
