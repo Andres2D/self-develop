@@ -1,16 +1,52 @@
 .item {
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.header {
+  display: flex;
+  align-items: center;
 }
 
 .title {
   font-size: larger;
   text-align: start;
+  font-weight: 700;
+}
+
+.label {
+  color: grey;
+  font-weight: 700;
 }
 
 .dates {
+  font-weight: 700;
   font-size: small;
   color: grey;
   display: inline;
+  margin-left: 10px;
+  width: 50px;
+}
+
+.jobTitle {
+  font-weight: 700;
+}
+
+.title,
+.dates,
+.jobTitle,
+.description {
+  border: none;
+  background-color: transparent;
+}
+
+.title:focus-visible,
+.jobTitle:focus-visible,
+.description:focus-visible,
+.dates:focus-visible {
+  outline: none;
 }
 
 .jobTitle {
