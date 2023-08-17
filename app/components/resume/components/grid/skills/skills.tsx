@@ -57,7 +57,7 @@ const Skills = ({ className }: Props) => {
   const skillsListMap = skills.map(({id, title, description}) => {
     return (
       <SkillItem
-        key={id}
+        key={`skill-${id}`}
         item={title}
         description={description}
         removeItem={() => removeItemHandler(id)}
